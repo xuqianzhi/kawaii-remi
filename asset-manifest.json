@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kawaii-remi/static/css/main.c057fc88.css",
-    "main.js": "/kawaii-remi/static/js/main.c17fe84f.js",
+    "main.css": "/kawaii-remi/static/css/main.7c4df30b.css",
+    "main.js": "/kawaii-remi/static/js/main.b810ca05.js",
     "static/js/787.e3f74786.chunk.js": "/kawaii-remi/static/js/787.e3f74786.chunk.js",
     "static/media/xqz.png": "/kawaii-remi/static/media/xqz.5b5d5a0600ff2d51f9a7.png",
     "static/media/chimpanzee.png": "/kawaii-remi/static/media/chimpanzee.e9e8be820b59cb702dbf.png",
@@ -9,12 +9,12 @@
     "static/media/question-mark-blue.png": "/kawaii-remi/static/media/question-mark-blue.685e5265f993d7320efb.png",
     "static/media/question-mark-pink.png": "/kawaii-remi/static/media/question-mark-pink.d336f0ef7b197a60042d.png",
     "index.html": "/kawaii-remi/index.html",
-    "main.c057fc88.css.map": "/kawaii-remi/static/css/main.c057fc88.css.map",
-    "main.c17fe84f.js.map": "/kawaii-remi/static/js/main.c17fe84f.js.map",
+    "main.7c4df30b.css.map": "/kawaii-remi/static/css/main.7c4df30b.css.map",
+    "main.b810ca05.js.map": "/kawaii-remi/static/js/main.b810ca05.js.map",
     "787.e3f74786.chunk.js.map": "/kawaii-remi/static/js/787.e3f74786.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c057fc88.css",
-    "static/js/main.c17fe84f.js"
+    "static/css/main.7c4df30b.css",
+    "static/js/main.b810ca05.js"
   ]
 }
