@@ -3,6 +3,9 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 import QuestionMarkBlue from "../images/question-mark-blue.png";
 import RemiImage from "../images/remi.png";
 import "./kawaii_remi.css";
@@ -14,24 +17,26 @@ const bfNames = new Set([
   "xularry",
   "qianzhi",
   "larry",
-  "xqz"
+  "xqz",
+  "徐乾智",
 ]);
 
 interface EnterBfNameProps {
+  step: number;
   setStep: React.Dispatch<React.SetStateAction<number>>;
   setXqzSelected: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const EnterBfName: FC<EnterBfNameProps> = (props) => {
-  const { setStep, setXqzSelected } = props;
+  const { step, setStep, setXqzSelected } = props;
   const [name, setName] = useState<string>("");
 
   const onSubmit = () => {
     const userInput = name.toLowerCase().replace(/\s/g, "");
     if (bfNames.has(userInput)) {
-        setXqzSelected(true);
+      setXqzSelected(true);
     } else {
-        setXqzSelected(false);
+      setXqzSelected(false);
     }
     setStep(2);
   };
@@ -40,9 +45,13 @@ const EnterBfName: FC<EnterBfNameProps> = (props) => {
     setName(event.target.value);
   };
 
+  const innerBoxWidth = window.innerWidth * 0.85;
+  const imageHeight = window.innerWidth / 2;
+
   return (
-    <Box sx={{ width: "75%", marginTop: "20px" }}>
-      <Stack spacing={2}>
+    <Box sx={{ width: `${innerBoxWidth}px`, marginTop: "20px" }}>
+      <Stack spacing={3}>
+        <Typography variant="h4">{`Step ${step + 1}`}</Typography>
         <TextField
           id="enter-name"
           label="What's your boyfriend's name?"
@@ -50,24 +59,26 @@ const EnterBfName: FC<EnterBfNameProps> = (props) => {
           value={name}
           onChange={onTextChange}
         />
-        <Button variant="contained" type="submit" onClick={onSubmit}>
+        <Button
+          variant="contained"
+          type="submit"
+          onClick={onSubmit}
+          disabled={name === ""}
+        >
           Enter
         </Button>
-      </Stack>
-      <div className="container image-container">
-        <div className="image left-image">
-          <img src={RemiImage} style={{ left: "40%" }}></img>
-        </div>
-        <div
-          className="image right-image"
-          style={{
-            borderTopRightRadius: "100px",
-            borderBottomRightRadius: "100px",
-          }}
+        <ImageList
+          sx={{ width: "100%", height: imageHeight, borderRadius: 20 }}
+          cols={2}
         >
-          <img src={QuestionMarkBlue} style={{ left: "45%" }}></img>
-        </div>
-      </div>
+          <ImageListItem>
+            <img src={RemiImage}></img>
+          </ImageListItem>
+          <ImageListItem>
+            <img src={QuestionMarkBlue}></img>
+          </ImageListItem>
+        </ImageList>
+      </Stack>
     </Box>
   );
 };

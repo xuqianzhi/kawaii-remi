@@ -1,5 +1,5 @@
 import './App.css';
-import KawaiiRemi from './components/kawaii_remi.component';
+import KawaiiRemi from './components/kawaii_remi.component.tsx';
 
 function App() {
   return (

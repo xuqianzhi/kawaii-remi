@@ -3,6 +3,9 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 import QuestionMarkBlue from "../images/question-mark-blue.png";
 import QuestionMarkPink from "../images/question-mark-pink.png";
 import "./kawaii_remi.css";
@@ -16,20 +19,16 @@ const remiNames = new Set([
   "yuchen",
 ]);
 
-const remiMarriageNames = new Set([
-  "remixu",
-  "yuchenxu",
-  "xuremi",
-  "xuyuchen",
-]);
+const remiMarriageNames = new Set(["remixu", "yuchenxu", "xuremi", "xuyuchen"]);
 
 interface EnterNameProps {
+  step: number;
   setStep: React.Dispatch<React.SetStateAction<number>>;
   setXqzSelected: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const EnterName: FC<EnterNameProps> = (props) => {
-  const { setStep, setXqzSelected } = props;
+  const { step, setStep, setXqzSelected } = props;
   const [name, setName] = useState<string>("");
   const [error, setError] = useState<boolean>(false);
 
@@ -52,9 +51,13 @@ const EnterName: FC<EnterNameProps> = (props) => {
     setName(event.target.value);
   };
 
+  const innerBoxWidth = window.innerWidth * 0.85;
+  const imageHeight = window.innerWidth / 2;
+
   return (
-    <Box sx={{ width: "75%", marginTop: "20px" }}>
+    <Box sx={{ width: `${innerBoxWidth}px`, marginTop: "20px" }}>
       <Stack spacing={2}>
+        <Typography variant="h4">{`Step ${step + 1}`}</Typography>
         <TextField
           id="enter-name"
           label="Enter your name to begin"
@@ -64,24 +67,23 @@ const EnterName: FC<EnterNameProps> = (props) => {
           error={error}
           helperText={error ? "You're not Remi!" : ""}
         />
-        <Button variant="contained" type="submit" onClick={onSubmit}>
+        <Button
+          variant="contained"
+          type="submit"
+          onClick={onSubmit}
+          disabled={name === ""}
+        >
           Enter
         </Button>
+        <ImageList sx={{ width: "100%", height: imageHeight }} cols={2}>
+          <ImageListItem>
+            <img src={QuestionMarkPink}></img>
+          </ImageListItem>
+          <ImageListItem>
+            <img src={QuestionMarkBlue}></img>
+          </ImageListItem>
+        </ImageList>
       </Stack>
-      <div className="container image-container">
-        <div className="image left-image">
-          <img src={QuestionMarkPink} style={{ left: "40%" }}></img>
-        </div>
-        <div
-          className="image right-image"
-          style={{
-            borderTopRightRadius: "100px",
-            borderBottomRightRadius: "100px",
-          }}
-        >
-          <img src={QuestionMarkBlue} style={{ left: "45%" }}></img>
-        </div>
-      </div>
     </Box>
   );
 };

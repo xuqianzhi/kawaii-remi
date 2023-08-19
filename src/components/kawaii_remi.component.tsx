@@ -1,8 +1,9 @@
 import React, { FC, useState } from "react";
 import Typography from "@mui/material/Typography";
-import EnterBfName from "./enter_bf_name.component";
-import EnterName from "./enter_name.component";
-import Result from "./result.component";
+import EnterBfName from "./enter_bf_name.component.tsx";
+import EnterName from "./enter_name.component.tsx";
+import Result from "./result.component.tsx";
+import "./kawaii_remi.css";
 
 const KawaiiRemi: FC = () => {
   const [step, setStep] = useState<number>(0);
@@ -10,25 +11,28 @@ const KawaiiRemi: FC = () => {
 
   if (step === 0) {
     return (
-      <div style={{ marginTop: "20px" }}>
-        <Typography variant="h4">{`Step ${step + 1}`}</Typography>
-        <EnterName setStep={setStep} setXqzSelected={setXqzSelected} />
+      <div className="container">
+        <EnterName
+          setStep={setStep}
+          setXqzSelected={setXqzSelected}
+          step={step}
+        />
       </div>
     );
   } else if (step === 1) {
     return (
-      <div style={{ marginTop: "20px" }}>
-        <Typography variant="h4">{`Step ${step + 1}`}</Typography>
-        <EnterBfName setStep={setStep} setXqzSelected={setXqzSelected} />
+      <div className="container">
+        <EnterBfName
+          setStep={setStep}
+          setXqzSelected={setXqzSelected}
+          step={step}
+        />
       </div>
     );
   } else {
     return (
-      <div style={{ marginTop: "20px" }}>
-        <Typography variant="h4">
-          {xqzSelected ? "💗💗💗💗💗" : "How your future bf looks like :)"}
-        </Typography>
-        <Result xqzSelected={xqzSelected} setStep={setStep} />
+      <div className="container">
+        <Result xqzSelected={xqzSelected} setStep={setStep} step={step} />
       </div>
     );
   }
