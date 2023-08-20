@@ -1,7 +1,7 @@
 {
   "name": "kawaii-remi",
   "version": "0.1.0",
-  "homepage": "https://xuqianzhi.github.io/kawaii-remi",
+  "homepage": "https://kawaii-remi.com",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
