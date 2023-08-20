@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.e270c284.css",
-    "main.js": "/static/js/main.8a2b514f.js",
-    "static/js/787.e3f74786.chunk.js": "/static/js/787.e3f74786.chunk.js",
-    "static/media/xqz.png": "/static/media/xqz.5b5d5a0600ff2d51f9a7.png",
-    "static/media/chimpanzee.png": "/static/media/chimpanzee.e9e8be820b59cb702dbf.png",
-    "static/media/remi.png": "/static/media/remi.50c46d577d8364079baa.png",
-    "static/media/question-mark-blue.png": "/static/media/question-mark-blue.685e5265f993d7320efb.png",
-    "static/media/question-mark-pink.png": "/static/media/question-mark-pink.d336f0ef7b197a60042d.png",
-    "index.html": "/index.html",
-    "main.e270c284.css.map": "/static/css/main.e270c284.css.map",
-    "main.8a2b514f.js.map": "/static/js/main.8a2b514f.js.map",
-    "787.e3f74786.chunk.js.map": "/static/js/787.e3f74786.chunk.js.map"
+    "main.css": "/kawaii-remi/static/css/main.e270c284.css",
+    "main.js": "/kawaii-remi/static/js/main.20aa8d10.js",
+    "static/js/787.e3f74786.chunk.js": "/kawaii-remi/static/js/787.e3f74786.chunk.js",
+    "static/media/xqz.png": "/kawaii-remi/static/media/xqz.5b5d5a0600ff2d51f9a7.png",
+    "static/media/chimpanzee.png": "/kawaii-remi/static/media/chimpanzee.e9e8be820b59cb702dbf.png",
+    "static/media/remi.png": "/kawaii-remi/static/media/remi.50c46d577d8364079baa.png",
+    "static/media/question-mark-blue.png": "/kawaii-remi/static/media/question-mark-blue.685e5265f993d7320efb.png",
+    "static/media/question-mark-pink.png": "/kawaii-remi/static/media/question-mark-pink.d336f0ef7b197a60042d.png",
+    "index.html": "/kawaii-remi/index.html",
+    "main.e270c284.css.map": "/kawaii-remi/static/css/main.e270c284.css.map",
+    "main.20aa8d10.js.map": "/kawaii-remi/static/js/main.20aa8d10.js.map",
+    "787.e3f74786.chunk.js.map": "/kawaii-remi/static/js/787.e3f74786.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e270c284.css",
-    "static/js/main.8a2b514f.js"
+    "static/js/main.20aa8d10.js"
   ]
 }
